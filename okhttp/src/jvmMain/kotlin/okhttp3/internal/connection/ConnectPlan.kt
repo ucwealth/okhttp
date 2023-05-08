@@ -264,7 +264,7 @@ class ConnectPlan(
     try {
       Platform.get().connectSocket(rawSocket, route.socketAddress, chain.connectTimeoutMillis())
     } catch (e: ConnectException) {
-      throw ConnectException("Failed to connect to ${route.socketAddress}").apply {
+      throw ConnectException("Failed to connect to server").apply {
         initCause(e)
       }
     }
